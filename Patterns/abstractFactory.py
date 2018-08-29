@@ -1,6 +1,8 @@
 from pypattyrn.creational.factory import Factory, AbstractFactory
 from Patterns.factory import convertionFactoryCurrency, convertionFactoryLongitude
-class convertionFactory(AbstractFactory):  # A Factory class for creating creatures.
+
+
+class convertionFactory(AbstractFactory):
 
     def __init__(self):
         super().__init__()
@@ -9,8 +11,8 @@ class convertionFactory(AbstractFactory):  # A Factory class for creating creatu
 
     def create(self, convertion_type, number):  # Implement the Abstract create method.
         if convertion_type == 1 or convertion_type == 2:
-            return self._factories['longitude_factory'].create(convertion_type, number)  # Use the AnimalFactory
+            return self._factories['longitude_factory'].create(convertion_type, number)
         elif convertion_type == 3 or convertion_type == 4:
-            return self._factories['currency_factory'].create(convertion_type, number)  # Use the InsectFactory
+            return self._factories['currency_factory'].create(convertion_type, number)
         else:
             return None

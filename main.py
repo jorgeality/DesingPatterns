@@ -1,7 +1,9 @@
-from Patterns.abstractFactory import convertionFactory# implementing abstractFactory
-from pypattyrn.structural.adapter import Adapter#implementing adapter pattern
-from convertionSystem import toCentimeters, toMeters, toDollar, toPesos
-
+from Patterns.abstractFactory import convertionFactory
+from pypattyrn.structural.adapter import Adapter
+from convertionSystem.toCentimeters import toCentimeters
+from convertionSystem.toDollar import toDollar
+from convertionSystem.toPesos import toPesos
+from convertionSystem.toMeters import toMeters
 
 
 systemConvertion = convertionFactory()

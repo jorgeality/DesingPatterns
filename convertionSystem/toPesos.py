@@ -9,7 +9,7 @@ from pypattyrn.creational.singleton import Singleton
     this class is implemented with singleton pattern
     to create always the same instance of this
 """
-class toDPesos(object, metaclass=Singleton):
+class toPesos(object, metaclass=Singleton):
 
     dollar = 0
     #constructor

@@ -1,11 +1,14 @@
 #importing necessary classes to implement factory design pattern
 from convertionSystem.toCentimeters import toCentimeters
+from convertionSystem.toDollar import toDollar
+from convertionSystem.toPesos import toPesos
 from convertionSystem.toMeters import toMeters
+
 from pypattyrn.creational.factory import Factory  # This is just an interface
 
 
 #class responsible for implementing the factory design pattern
-class convertionFactoryLongitude(Factory):  # A factory class for creating animals.
+class convertionFactoryLongitude(Factory):
 
     #method responsible for units conversión
     #@param convertion_type is the option selected to convert from one unit to another.
@@ -20,7 +23,7 @@ class convertionFactoryLongitude(Factory):  # A factory class for creating anima
             return None
 
 #class responsible for implementing the factory design pattern
-class convertionFactoryCurrency(Factory):  # A factory class for creating animals.
+class convertionFactoryCurrency(Factory):
 
     #method responsible for units conversión
     #@param convertion_type is the option selected to convert from one unit to another.
@@ -28,8 +31,8 @@ class convertionFactoryCurrency(Factory):  # A factory class for creating animal
     #@return a class, contains the desired value in the necessary unit
     def create(self, convertion_type, number):  # Implement the abstract create method.
         if convertion_type == 3:
-            return toMeters(number)
+            return toPesos(number)
         elif convertion_type == 4:
-            return toCentimeters(number)
+            return toDollar(number)
         else:
             return None
