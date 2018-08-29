@@ -4,18 +4,26 @@ from convertionSystem.toMeters import toMeters
 
 
 
-option = int(input('what do you want to do: \n 1. Convert centimeters to Meters . \n 2. Convert  Meters to Centimeters \n select your option: '))
 
+systemConvertion = convertionFactory()
 
+while True:
+    print('******************************************')
+    option = int(input(
+        'what do you want to do: \n 1. Convert centimeters to Meters . \n 2. Convert  Meters to Centimeters. \n 3. Exit \n select your option: '))
+    if option == 1:
 
-if option == 1:
-    systemConvertion = convertionFactory()
-    number = float(input('number of centimeters : '))
-    toMeters = systemConvertion.create(option, number)
-    toMeters.convert()
-elif option == 2:
-    systemConvertion = convertionFactory()
-    number = float(input('number of meters : '))
-    toCentimeters = systemConvertion.create(option, number)
-    toCentimeters.convert()
+        number = float(input(' number of centimeters : '))
+        toMeters = systemConvertion.create(option, number)
+        toMeters.convert()
+        print(toMeters)
+    elif option == 2:
 
+        number = float(input(' number of meters : '))
+        toCentimeters = systemConvertion.create(option, number)
+        toCentimeters.convert()
+        print(toCentimeters)
+    else:
+        break
+
+    print('******************************************')

@@ -1,5 +1,9 @@
+#implementing singleton design pattern
+from pypattyrn.creational.singleton import Singleton
+
+
 #class implemented to convert meters to centimeters
-class toCentimeters(object):
+class toCentimeters(object, metaclass=Singleton):
 
     meters = 0
     #constructor
