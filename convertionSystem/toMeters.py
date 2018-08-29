@@ -13,4 +13,4 @@ class toMeters(object, metaclass=Singleton):
     # method responsible for converting centimeters to meters
     def convert(self):
         meters =  self.centimeters / 100
-        print(self.centimeters,' centimeters is/are ', meters,' meters')
+        return str(self.centimeters)+' centimeters is/are '+str(meters)+' meters'

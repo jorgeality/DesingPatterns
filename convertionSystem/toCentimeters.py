@@ -1,4 +1,6 @@
 #implementing singleton design pattern
+
+
 from pypattyrn.creational.singleton import Singleton
 
 
@@ -13,4 +15,4 @@ class toCentimeters(object, metaclass=Singleton):
     # method responsible for converting meters to centimeters
     def convert(self):
         centimeters = self.meters * 100
-        print(self.meters,'meters is/are ', centimeters,'centimeters')
+        return str(self.meters) +' meters is/are ' +str(centimeters) +' centimeters'
