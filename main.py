@@ -9,7 +9,7 @@ from convertionSystem.toMeters import toMeters
 systemConvertion = convertionFactory()
 
 while True:
-    print('******************************************')
+
     option = int(input(
         'what do you want to do: \n 1. Convert centimeters to Meters . \n 2. Convert  Meters to Centimeters. \n 3. Exit \n select your option: '))
     if option == 1:
